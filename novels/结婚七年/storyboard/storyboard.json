@@ -1,7 +1,7 @@
 {
   "project": "结婚七年",
   "novel": "novels/结婚七年/正文.md",
-  "created": "2026-03-13T14:44:09.268Z",
+  "created": "2026-03-13T15:53:20.721Z",
   "episodes": [
     {
       "title": "第一章：含恨而终",
@@ -12,7 +12,7 @@
           "duration": 7,
           "narration": "肺癌晚期，陈北辰活不过三个月。\n可他万万没想到，比他先死的，是他的婚姻。\n病房里只有他一个人，死寂得能听见监护仪的滴滴声。",
           "dialogue": [],
-          "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, hospital room, white walls, medical equipment, heart rate monitor, IV drip, hospital bed, 1boy, black hair, short hair, handsome, 22 years old, Chinese male, slender build, medium shot, cinematic composition,",
+          "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, hospital room, white walls, medical equipment, heart rate monitor, IV drip, hospital bed, pale patient lying in bed, sunset light through window, wide shot,",
           "negative_prompt": "worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon, ugly",
           "camera": "wide",
           "camera_movement": "slow_zoom_out",
@@ -32,7 +32,7 @@
               "text": "北辰哥，不好意思啊，这几天太忙了，没去医院看你。你好好养病，等我忙完这阵就来看你。——柳安然"
             }
           ],
-          "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, hospital room, white walls, medical equipment, heart rate monitor, IV drip, hospital bed, , wide shot, atmospheric,",
+          "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, close-up of smartphone screen glowing, WeChat message notification, dark hospital room background, message from wife, dramatic lighting on phone,",
           "negative_prompt": "worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon, ugly",
           "camera": "medium",
           "camera_movement": "static",
@@ -45,7 +45,7 @@
           "duration": 7,
           "narration": "都这时候了，她还在演。\n如果不是临死前的那一刻，他或许还会被这条消息感动，还会相信这个他爱了七年的女人真的在乎他。\n可就在三天前，他用柳安然的手机转账，意外看到了她的转账记录。",
           "dialogue": [],
-          "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, hospital room, white walls, medical equipment, heart rate monitor, IV drip, hospital bed, , wide shot, atmospheric,",
+          "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, close-up portrait of 22-year-old Chinese man, black short hair, lying in hospital bed, looking at phone, sarcastic smile, tears in eyes, emotional, dramatic side lighting,",
           "negative_prompt": "worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon, ugly",
           "camera": "medium",
           "camera_movement": "static",
@@ -58,7 +58,7 @@
           "duration": 7,
           "narration": "那一笔笔进账，每一笔都像一把刀，插在他的心上。\n这七年里，他的老婆柳安然，累计收到周子轩转账三百五十万。\n周子轩，他的大学同学，他最好的兄弟，当年结婚时还给他当伴郎！",
           "dialogue": [],
-          "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, hospital room, white walls, medical equipment, heart rate monitor, IV drip, hospital bed, , wide shot, atmospheric,",
+          "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, bank transfer record on phone screen, large amount of money, multiple transactions, cold blue light, close-up of financial app, betrayal theme,",
           "negative_prompt": "worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon, ugly",
           "camera": "medium",
           "camera_movement": "static",
@@ -82,7 +82,7 @@
               "text": "同学，请问计算机系在哪边？"
             }
           ],
-          "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, graduation ceremony, university campus, outdoor venue, crowd of students, sunny day, 1boy, black hair, short hair, handsome, 22 years old, Chinese male, slender build, medium shot, cinematic composition,",
+          "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, graduation ceremony, university campus, outdoor venue, crowd of students in graduation gowns, sunny day, young man searching in crowd, looking for someone,",
           "negative_prompt": "worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon, ugly",
           "camera": "wide",
           "camera_movement": "slow_zoom_out",
@@ -97,7 +97,7 @@
           "duration": 7,
           "narration": "陈北辰循声望去，柳安然正朝着他走过来。\n她今天穿了一条白色连衣裙，长发披肩，看起来清新脱俗。\n如果不是亲身经历过，如果不是死过一次，陈北辰或许还会被她的外表迷惑。",
           "dialogue": [],
-          "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, graduation ceremony, university campus, outdoor venue, crowd of students, sunny day, 1boy, black hair, short hair, handsome, 22 years old, Chinese male, slender build, medium shot, cinematic composition,",
+          "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, beautiful Chinese girl in white dress, long black hair, approaching, smiling with dimples, graduation ceremony background, romantic atmosphere, shallow depth of field,",
           "negative_prompt": "worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon, ugly",
           "camera": "medium",
           "camera_movement": "static",
@@ -126,7 +126,7 @@
               "text": "谢谢。"
             }
           ],
-          "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, graduation ceremony, university campus, outdoor venue, crowd of students, sunny day, 1boy, black hair, short hair, handsome, 22 years old, Chinese male, slender build, close-up portrait, emotional, dramatic,",
+          "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, young man cold expression, watching girl walk away, turning his back, indifferent eyes, revenge determination, dramatic lighting,",
           "negative_prompt": "worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon, ugly",
           "camera": "close-up",
           "camera_movement": "slow_push_in",
@@ -141,7 +141,7 @@
           "duration": 7,
           "narration": "可这一次，陈北辰只是冷冷地看着她的背影，没有任何行动。\n柳安然走了几步，发现身后没有动静，忍不住回过头。\n这个男生怎么回事？按照她预想的剧本，他应该会追上来要联系方式才对。",
           "dialogue": [],
-          "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, graduation ceremony, university campus, outdoor venue, crowd of students, sunny day, 1boy, black hair, short hair, handsome, 22 years old, Chinese male, slender build, medium shot, cinematic composition,",
+          "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, young man cold expression, watching girl walk away, turning his back, indifferent eyes, revenge determination, dramatic lighting,",
           "negative_prompt": "worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon, ugly",
           "camera": "medium",
           "camera_movement": "static",
@@ -167,7 +167,7 @@
               "text": "偶然"
             }
           ],
-          "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, modern interior, 1boy, black hair, short hair, handsome, 22 years old, Chinese male, slender build, close-up portrait, emotional, dramatic,",
+          "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, modern interior,",
           "negative_prompt": "worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon, ugly",
           "camera": "close-up",
           "camera_movement": "slow_push_in",
@@ -188,7 +188,7 @@
               "text": "偶遇"
             }
           ],
-          "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, modern interior, 1boy, black hair, short hair, handsome, 22 years old, Chinese male, slender build, medium shot, cinematic composition,",
+          "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, modern interior,",
           "negative_prompt": "worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon, ugly",
           "camera": "medium",
           "camera_movement": "static",
@@ -216,7 +216,7 @@
               "text": "北辰经常提起你，说你们是大学最好的兄弟。"
             }
           ],
-          "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, modern interior, 1boy, black hair, short hair, handsome, 22 years old, Chinese male, slender build, close-up portrait, emotional, dramatic,",
+          "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, modern interior,",
           "negative_prompt": "worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon, ugly",
           "camera": "close-up",
           "camera_movement": "slow_push_in",
@@ -238,7 +238,7 @@
               "text": "哈哈，是啊，北辰是我最好的兄弟！"
             }
           ],
-          "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, modern interior, 1boy, black hair, short hair, handsome, 22 years old, Chinese male, slender build, close-up portrait, emotional, dramatic,",
+          "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, modern interior,",
           "negative_prompt": "worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon, ugly",
           "camera": "close-up",
           "camera_movement": "slow_push_in",

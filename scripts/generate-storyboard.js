@@ -204,40 +204,46 @@ function parseNovel(content) {
   return scenes;
 }
 
-// 生成提示词
-function generatePrompt(panel, sceneName, emotion) {
+// 生成提示词 - 根据画面序号差异化
+function generatePrompt(panel, sceneName, emotion, panelIndex, totalPanels) {
   const basePrompt = 'masterpiece, best quality, highly detailed, cinematic lighting';
   
-  // 场景描述
-  const scenePrompt = getScenePrompt(sceneName);
+  // 场景描述 - 根据画面序号变化
+  let scenePrompt = '';
   
-  // 角色描述
-  let characterPrompt = '';
-  if (panel.characters && panel.characters.length > 0) {
-    const mainChar = panel.characters[0];
-    characterPrompt = getCharacterPrompt(mainChar, emotion);
-  }
-  
-  // 镜头类型
-  let cameraPrompt = '';
-  if (panel.type === 'dialogue') {
-    cameraPrompt = 'close-up portrait, emotional, dramatic';
-  } else if (panel.characters.length === 0) {
-    cameraPrompt = 'wide shot, atmospheric';
+  if (sceneName.includes('医院')) {
+    if (panelIndex === 0) {
+      // 第一张：病房全景
+      scenePrompt = 'hospital room, white walls, medical equipment, heart rate monitor, IV drip, hospital bed, pale patient lying in bed, sunset light through window, wide shot';
+    } else if (panelIndex === 1) {
+      // 第二张：手机特写
+      scenePrompt = 'close-up of smartphone screen glowing, WeChat message notification, dark hospital room background, message from wife, dramatic lighting on phone';
+    } else if (panelIndex === 2) {
+      // 第三张：陈北辰表情特写
+      scenePrompt = 'close-up portrait of 22-year-old Chinese man, black short hair, lying in hospital bed, looking at phone, sarcastic smile, tears in eyes, emotional, dramatic side lighting';
+    } else {
+      // 第四张：回忆/转账记录
+      scenePrompt = 'bank transfer record on phone screen, large amount of money, multiple transactions, cold blue light, close-up of financial app, betrayal theme';
+    }
+  } else if (sceneName.includes('宿舍')) {
+    if (panelIndex === 0) {
+      scenePrompt = 'university dormitory, male dorm room, morning sunlight through window, young man waking up in bed, confused expression, checking his hands, time travel atmosphere';
+    } else {
+      scenePrompt = 'close-up of smartphone showing date "2007-06-15", calendar app, young man holding phone, realization moment, golden morning light';
+    }
+  } else if (sceneName.includes('毕业')) {
+    if (panelIndex === 0) {
+      scenePrompt = 'graduation ceremony, university campus, outdoor venue, crowd of students in graduation gowns, sunny day, young man searching in crowd, looking for someone';
+    } else if (panelIndex === 1) {
+      scenePrompt = 'beautiful Chinese girl in white dress, long black hair, approaching, smiling with dimples, graduation ceremony background, romantic atmosphere, shallow depth of field';
+    } else {
+      scenePrompt = 'young man cold expression, watching girl walk away, turning his back, indifferent eyes, revenge determination, dramatic lighting';
+    }
   } else {
-    cameraPrompt = 'medium shot, cinematic composition';
+    scenePrompt = getScenePrompt(sceneName);
   }
   
-  // 情绪氛围
-  let emotionPrompt = '';
-  if (emotion === '冷漠') emotionPrompt = 'cold atmosphere, tense';
-  if (emotion === '痛苦') emotionPrompt = 'sad atmosphere, melancholic';
-  if (emotion === '愤怒') emotionPrompt = 'intense atmosphere, dramatic lighting';
-  if (emotion === '甜美') emotionPrompt = 'warm light, pleasant atmosphere';
-  
-  return `${basePrompt}, ${scenePrompt}, ${characterPrompt}, ${cameraPrompt}, ${emotionPrompt}`
-    .replace(/\s+/g, ' ')
-    .trim();
+  return `${basePrompt}, ${scenePrompt}, ${emotion === 'neutral' ? '' : emotion + ' atmosphere'}`.replace(/\s+/g, ' ').trim();
 }
 
 // 主流程
@@ -302,14 +308,18 @@ async function main() {
       if (mainPanel.type === 'dialogue') cameraType = 'close-up';
       else if (i === 0) cameraType = 'wide';
       
+      // 计算当前是第几个画面 (0, 1, 2, 3...)
+      const panelIndex = Math.floor(i / 3);
+      const totalPanels = Math.ceil(Math.min(scene.panels.length, 12) / 3);
+      
       episode.panels.push({
-        id: `p${String(i/3 + 1).padStart(3, '0')}`,
+        id: `p${String(panelIndex + 1).padStart(3, '0')}`,
         duration: 4 + panelGroup.length,
         narration: narration.substring(0, 200),
         dialogue: dialogues,
-        prompt: generatePrompt(mainPanel, scene.setting, emotion),
+        prompt: generatePrompt(mainPanel, scene.setting, emotion, panelIndex, totalPanels),
         negative_prompt: 'worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon, ugly',
-        camera: cameraType,
+        camera: mainPanel.type === 'dialogue' ? 'close-up' : (i === 0 ? 'wide' : 'medium'),
         camera_movement: cameraMovement,
         emotion: emotion,
         characters: mainPanel.characters,

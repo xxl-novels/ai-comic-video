@@ -1,7 +1,7 @@
 # 🎨 即梦图片生成提示词清单
 
 - **项目名称**: 结婚七年
-- **生成时间**: 3/13/2026, 11:18:16 PM
+- **生成时间**: 3/13/2026, 11:53:50 PM
 
 ---
 
@@ -32,7 +32,7 @@
 **即梦提示词**:
 
 ```
-masterpiece, best quality, highly detailed, cinematic lighting, hospital room, white walls, medical equipment, heart rate monitor, IV drip, hospital bed, 1boy, black hair, short hair, handsome, 22 years old, Chinese male, slender build, medium shot, cinematic composition,
+masterpiece, best quality, highly detailed, cinematic lighting, hospital room, white walls, medical equipment, heart rate monitor, IV drip, hospital bed, pale patient lying in bed, sunset light through window, wide shot,
 ```
 
 **反向提示词**:
@@ -61,7 +61,7 @@ worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon,
 **即梦提示词**:
 
 ```
-masterpiece, best quality, highly detailed, cinematic lighting, hospital room, white walls, medical equipment, heart rate monitor, IV drip, hospital bed, , wide shot, atmospheric,
+masterpiece, best quality, highly detailed, cinematic lighting, close-up of smartphone screen glowing, WeChat message notification, dark hospital room background, message from wife, dramatic lighting on phone,
 ```
 
 **反向提示词**:
@@ -94,7 +94,7 @@ worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon,
 **即梦提示词**:
 
 ```
-masterpiece, best quality, highly detailed, cinematic lighting, hospital room, white walls, medical equipment, heart rate monitor, IV drip, hospital bed, , wide shot, atmospheric,
+masterpiece, best quality, highly detailed, cinematic lighting, close-up portrait of 22-year-old Chinese man, black short hair, lying in hospital bed, looking at phone, sarcastic smile, tears in eyes, emotional, dramatic side lighting,
 ```
 
 **反向提示词**:
@@ -123,7 +123,7 @@ worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon,
 **即梦提示词**:
 
 ```
-masterpiece, best quality, highly detailed, cinematic lighting, hospital room, white walls, medical equipment, heart rate monitor, IV drip, hospital bed, , wide shot, atmospheric,
+masterpiece, best quality, highly detailed, cinematic lighting, bank transfer record on phone screen, large amount of money, multiple transactions, cold blue light, close-up of financial app, betrayal theme,
 ```
 
 **反向提示词**:
@@ -157,7 +157,7 @@ worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon,
 **即梦提示词**:
 
 ```
-masterpiece, best quality, highly detailed, cinematic lighting, graduation ceremony, university campus, outdoor venue, crowd of students, sunny day, 1boy, black hair, short hair, handsome, 22 years old, Chinese male, slender build, medium shot, cinematic composition,
+masterpiece, best quality, highly detailed, cinematic lighting, graduation ceremony, university campus, outdoor venue, crowd of students in graduation gowns, sunny day, young man searching in crowd, looking for someone,
 ```
 
 **反向提示词**:
@@ -190,7 +190,7 @@ worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon,
 **即梦提示词**:
 
 ```
-masterpiece, best quality, highly detailed, cinematic lighting, graduation ceremony, university campus, outdoor venue, crowd of students, sunny day, 1boy, black hair, short hair, handsome, 22 years old, Chinese male, slender build, medium shot, cinematic composition,
+masterpiece, best quality, highly detailed, cinematic lighting, beautiful Chinese girl in white dress, long black hair, approaching, smiling with dimples, graduation ceremony background, romantic atmosphere, shallow depth of field,
 ```
 
 **反向提示词**:
@@ -219,7 +219,7 @@ worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon,
 **即梦提示词**:
 
 ```
-masterpiece, best quality, highly detailed, cinematic lighting, graduation ceremony, university campus, outdoor venue, crowd of students, sunny day, 1boy, black hair, short hair, handsome, 22 years old, Chinese male, slender build, close-up portrait, emotional, dramatic,
+masterpiece, best quality, highly detailed, cinematic lighting, young man cold expression, watching girl walk away, turning his back, indifferent eyes, revenge determination, dramatic lighting,
 ```
 
 **反向提示词**:
@@ -254,7 +254,7 @@ worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon,
 **即梦提示词**:
 
 ```
-masterpiece, best quality, highly detailed, cinematic lighting, graduation ceremony, university campus, outdoor venue, crowd of students, sunny day, 1boy, black hair, short hair, handsome, 22 years old, Chinese male, slender build, medium shot, cinematic composition,
+masterpiece, best quality, highly detailed, cinematic lighting, young man cold expression, watching girl walk away, turning his back, indifferent eyes, revenge determination, dramatic lighting,
 ```
 
 **反向提示词**:
@@ -288,7 +288,7 @@ worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon,
 **即梦提示词**:
 
 ```
-masterpiece, best quality, highly detailed, cinematic lighting, modern interior, 1boy, black hair, short hair, handsome, 22 years old, Chinese male, slender build, close-up portrait, emotional, dramatic,
+masterpiece, best quality, highly detailed, cinematic lighting, modern interior,
 ```
 
 **反向提示词**:
@@ -321,7 +321,7 @@ worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon,
 **即梦提示词**:
 
 ```
-masterpiece, best quality, highly detailed, cinematic lighting, modern interior, 1boy, black hair, short hair, handsome, 22 years old, Chinese male, slender build, medium shot, cinematic composition,
+masterpiece, best quality, highly detailed, cinematic lighting, modern interior,
 ```
 
 **反向提示词**:
@@ -354,7 +354,7 @@ worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon,
 **即梦提示词**:
 
 ```
-masterpiece, best quality, highly detailed, cinematic lighting, modern interior, 1boy, black hair, short hair, handsome, 22 years old, Chinese male, slender build, close-up portrait, emotional, dramatic,
+masterpiece, best quality, highly detailed, cinematic lighting, modern interior,
 ```
 
 **反向提示词**:
@@ -389,7 +389,7 @@ worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon,
 **即梦提示词**:
 
 ```
-masterpiece, best quality, highly detailed, cinematic lighting, modern interior, 1boy, black hair, short hair, handsome, 22 years old, Chinese male, slender build, close-up portrait, emotional, dramatic,
+masterpiece, best quality, highly detailed, cinematic lighting, modern interior,
 ```
 
 **反向提示词**:
