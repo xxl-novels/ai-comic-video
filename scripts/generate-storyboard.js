@@ -1,38 +1,57 @@
 #!/usr/bin/env node
 /**
- * AI 漫剧分镜脚本生成器（增强版）
+ * AI 漫剧分镜脚本生成器（增强版 - 支持多小说）
  * 读取角色和场景设定，生成更具体的提示词
- * 输入：小说章节文本
- * 输出：结构化分镜 JSON
+ * 输入：小说目录（包含 正文.md）
+ * 输出：结构化分镜 JSON 到该目录的 storyboard/
  */
 
 const fs = require('fs');
 const path = require('path');
 
-// 读取小说文件
-const novelPath = process.argv[2];
-if (!novelPath) {
-  console.error('Usage: node generate-storyboard.js <novel.md>');
+// 获取小说目录
+const novelDir = process.argv[2];
+if (!novelDir) {
+  console.error('Usage: node generate-storyboard.js <novel-directory>');
+  console.error('Example: node generate-storyboard.js novels/结婚七年');
+  process.exit(1);
+}
+
+const novelPath = path.join(novelDir, '正文.md');
+if (!fs.existsSync(novelPath)) {
+  console.error(`❌ 找不到小说正文: ${novelPath}`);
   process.exit(1);
 }
 
 const novelContent = fs.readFileSync(novelPath, 'utf-8');
-const projectRoot = path.dirname(novelPath);
+const projectName = path.basename(novelDir);
 
-// 加载角色设定
+// 加载角色设定（优先从小说目录读取，否则从全局读取）
 function loadCharacter(name) {
-  const charPath = path.join(projectRoot, '..', 'characters', name, 'description.md');
-  if (fs.existsSync(charPath)) {
-    return fs.readFileSync(charPath, 'utf-8');
+  // 先尝试小说专属角色设定
+  const novelCharPath = path.join(novelDir, 'characters', name, 'description.md');
+  if (fs.existsSync(novelCharPath)) {
+    return fs.readFileSync(novelCharPath, 'utf-8');
+  }
+  // 回退到全局角色设定
+  const globalCharPath = path.join(novelDir, '..', '..', 'characters', name, 'description.md');
+  if (fs.existsSync(globalCharPath)) {
+    return fs.readFileSync(globalCharPath, 'utf-8');
   }
   return null;
 }
 
-// 加载场景设定
+// 加载场景设定（优先从小说目录读取，否则从全局读取）
 function loadScene(sceneName) {
-  const scenePath = path.join(projectRoot, '..', 'scenes', `${sceneName}.md`);
-  if (fs.existsSync(scenePath)) {
-    return fs.readFileSync(scenePath, 'utf-8');
+  // 先尝试小说专属场景设定
+  const novelScenePath = path.join(novelDir, 'scenes', `${sceneName}.md`);
+  if (fs.existsSync(novelScenePath)) {
+    return fs.readFileSync(novelScenePath, 'utf-8');
+  }
+  // 回退到全局场景设定
+  const globalScenePath = path.join(novelDir, '..', '..', 'scenes', `${sceneName}.md`);
+  if (fs.existsSync(globalScenePath)) {
+    return fs.readFileSync(globalScenePath, 'utf-8');
   }
   return null;
 }
@@ -225,12 +244,13 @@ function generatePrompt(panel, sceneName, emotion) {
 async function main() {
   const scenes = parseNovel(novelContent);
   const storyboard = {
-    project: path.basename(novelPath, '.md'),
+    project: projectName,
+    novel: novelPath,
     created: new Date().toISOString(),
     episodes: []
   };
   
-  for (const scene of scenes.slice(0, 3)) { // 只处理前3个章节
+  for (const scene of scenes.slice(0, 3)) {
     console.log(`处理章节: ${scene.chapter} - 场景: ${scene.setting}`);
     
     const episode = {
@@ -253,7 +273,6 @@ async function main() {
           if (matches) {
             for (const match of matches) {
               const cleanText = match.replace(/[「」"]/g, '');
-              // 检测说话人
               let speaker = '旁白';
               if (p.text.includes('柳安然') || cleanText.includes('同学') && cleanText.includes('计算机')) speaker = '柳安然';
               else if (p.text.includes('陈北辰') || cleanText.includes('那边')) speaker = '陈北辰';
@@ -265,22 +284,20 @@ async function main() {
         }
       }
       
-      // 生成旁白（取第一个段落）
       const narration = panelGroup.map(p => p.text).join('\n');
       
       // 生成运镜描述
       let cameraMovement = 'static';
       if (mainPanel.type === 'dialogue') {
-        cameraMovement = 'slow_push_in'; // 对话时慢慢推近
+        cameraMovement = 'slow_push_in';
       } else if (i === 0) {
-        cameraMovement = 'slow_zoom_out'; // 开头慢慢拉开
+        cameraMovement = 'slow_zoom_out';
       } else if (emotion === '愤怒' || emotion === '震惊') {
-        cameraMovement = 'quick_push_in'; // 情绪激烈时快推
+        cameraMovement = 'quick_push_in';
       } else if (mainPanel.text.includes('回忆') || mainPanel.text.includes('想起')) {
-        cameraMovement = 'fade_transition'; // 回忆用淡入
+        cameraMovement = 'fade_transition';
       }
       
-      // 确定景别
       let cameraType = 'medium';
       if (mainPanel.type === 'dialogue') cameraType = 'close-up';
       else if (i === 0) cameraType = 'wide';
@@ -304,13 +321,13 @@ async function main() {
   }
   
   // 确保 storyboard 目录存在
-  const storyboardDir = path.join(projectRoot, '..', 'storyboard');
+  const storyboardDir = path.join(novelDir, 'storyboard');
   if (!fs.existsSync(storyboardDir)) {
     fs.mkdirSync(storyboardDir, { recursive: true });
   }
   
   // 输出 JSON
-  const outputPath = path.join(storyboardDir, `${path.basename(novelPath, '.md')}-storyboard.json`);
+  const outputPath = path.join(storyboardDir, 'storyboard.json');
   fs.writeFileSync(outputPath, JSON.stringify(storyboard, null, 2));
   console.log(`\n✅ 分镜脚本已生成: ${outputPath}`);
   console.log(`📊 总计: ${storyboard.episodes.length} 集, ${storyboard.episodes.reduce((a, e) => a + e.panels.length, 0)} 个画面`);

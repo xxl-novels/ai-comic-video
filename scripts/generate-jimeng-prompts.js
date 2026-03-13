@@ -1,40 +1,50 @@
 #!/usr/bin/env node
 /**
- * 生成即梦专用提示词
+ * 生成即梦专用提示词（支持多小说）
  * 输出为易读的文本格式，方便复制粘贴
  */
 
 const fs = require('fs');
 const path = require('path');
 
-const storyboardPath = process.argv[2] || './storyboard/正文-storyboard.json';
-const outputPath = process.argv[3] || './outputs/prompts-for-jimeng.txt';
+// 获取小说目录
+const novelDir = process.argv[2];
+if (!novelDir) {
+  console.error('Usage: node generate-jimeng-prompts.js <novel-directory>');
+  console.error('Example: node generate-jimeng-prompts.js novels/结婚七年');
+  process.exit(1);
+}
 
+const storyboardPath = path.join(novelDir, 'storyboard', 'storyboard.json');
 if (!fs.existsSync(storyboardPath)) {
   console.error(`❌ 找不到分镜文件: ${storyboardPath}`);
+  console.error('请先运行: node scripts/generate-storyboard.js ' + novelDir);
   process.exit(1);
 }
 
 const storyboard = JSON.parse(fs.readFileSync(storyboardPath, 'utf-8'));
+const projectName = path.basename(novelDir);
 
-// 确保输出目录存在
-const outputDir = path.dirname(outputPath);
+// 输出到小说的 outputs 目录
+const outputDir = path.join(novelDir, 'outputs');
 if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir, { recursive: true });
 }
+
+const outputPath = path.join(outputDir, 'prompts-for-jimeng.txt');
 
 let output = '';
 
 output += `===============================================\n`;
 output += `🎨 即梦图片生成提示词清单\n`;
-output += `项目名称: ${storyboard.project}\n`;
+output += `项目名称: ${projectName}\n`;
 output += `生成时间: ${new Date().toLocaleString()}\n`;
 output += `===============================================\n\n`;
 
 output += `📋 使用说明:\n`;
 output += `1. 复制下面的提示词到即梦\n`;
 output += `2. 生成后下载图片\n`;
-output += `3. 按命名规则保存到 outputs/images/\n`;
+output += `3. 按命名规则保存到 ${novelDir}/outputs/images/\n`;
 output += `4. 命名规则: ep[章节]-p[编号].jpg\n`;
 output += `   例如: ep01-p001.jpg = 第一章第1个画面\n\n`;
 output += `===============================================\n\n`;
@@ -101,6 +111,7 @@ for (let i = 0; i < storyboard.episodes.length; i++) {
 }
 
 output += `\n总计: ${totalPanels} 张图片\n`;
+output += `预估成本: ¥${(totalPanels * 0.22).toFixed(2)} (API) 或 即梦会员\n`;
 output += `===============================================\n`;
 
 fs.writeFileSync(outputPath, output);
@@ -109,4 +120,4 @@ console.log(`📊 共 ${totalPanels} 个画面的提示词`);
 console.log(`\n下一步:`);
 console.log(`1. 打开 ${outputPath}`);
 console.log(`2. 复制提示词到即梦生成`);
-console.log(`3. 下载图片保存到 outputs/images/`);
+console.log(`3. 下载图片保存到 ${novelDir}/outputs/images/`);
