@@ -9,7 +9,7 @@ const fs = require('fs');
 const { execSync } = require('child_process');
 const path = require('path');
 
-const storyboardPath = process.argv[2];
+const storyboardPath = process.argv[2] || './storyboard/正文-storyboard.json';
 const outputDir = process.argv[3] || './outputs/images';
 
 if (!storyboardPath) {

@@ -9,7 +9,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-const storyboardPath = process.argv[2];
+const storyboardPath = process.argv[2] || './storyboard/正文-storyboard.json';
 const outputDir = process.argv[3] || './outputs/audio';
 
 const storyboard = JSON.parse(fs.readFileSync(storyboardPath, 'utf-8'));

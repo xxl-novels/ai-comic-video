@@ -2,7 +2,7 @@
 # AI 漫剧视频自动合成
 # 依赖: ffmpeg
 
-STORYBOARD_JSON="$1"
+STORYBOARD_JSON="${1:-./storyboard/正文-storyboard.json}"
 OUTPUT_VIDEO="${2:-output.mp4}"
 
 if [ -z "$STORYBOARD_JSON" ]; then

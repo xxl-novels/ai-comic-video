@@ -122,8 +122,14 @@ async function main() {
     storyboard.episodes.push(episode);
   }
   
-  // 输出 JSON
-  const outputPath = novelPath.replace('.md', '-storyboard.json');
+  // 确保 storyboard 目录存在
+  const storyboardDir = path.join(path.dirname(novelPath), '..', 'storyboard');
+  if (!fs.existsSync(storyboardDir)) {
+    fs.mkdirSync(storyboardDir, { recursive: true });
+  }
+  
+  // 输出 JSON 到 storyboard 目录
+  const outputPath = path.join(storyboardDir, `${path.basename(novelPath, '.md')}-storyboard.json`);
   fs.writeFileSync(outputPath, JSON.stringify(storyboard, null, 2));
   console.log(`✅ 分镜脚本已生成: ${outputPath}`);
   console.log(`📊 总计: ${storyboard.episodes.length} 集, ${storyboard.episodes.reduce((a, e) => a + e.panels.length, 0)} 个画面`);

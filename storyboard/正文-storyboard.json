@@ -1,0 +1,156 @@
+{
+  "project": "正文",
+  "created": "2026-03-13T14:14:47.395Z",
+  "episodes": [
+    {
+      "title": "第一章：含恨而终",
+      "setting": "modern urban",
+      "panels": [
+        {
+          "id": "p001",
+          "duration": 6,
+          "narration": "肺癌晚期，陈北辰活不过三个月。\n可他万万没想到，比他先死的，是他的婚姻。\n病房里只有他一个人，死寂得能听见监护仪的滴滴声。",
+          "dialogue": [],
+          "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, modern Chinese urban style, modern interior, wide shot, , , atmospheric",
+          "negative_prompt": "worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon",
+          "camera": "wide",
+          "emotion": "neutral"
+        },
+        {
+          "id": "p002",
+          "duration": 6,
+          "narration": "手机突然亮了，是一条微信消息。\n「北辰哥，不好意思啊，这几天太忙了，没去医院看你。你好好养病，等我忙完这阵就来看你。——柳安然」\n陈北辰盯着那条消息，突然笑了。",
+          "dialogue": [
+            {
+              "speaker": " narrator",
+              "text": "北辰哥，不好意思啊，这几天太忙了，没去医院看你。你好好养病，等我忙完这阵就来看你。——柳安然"
+            }
+          ],
+          "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, modern Chinese urban style, modern interior, wide shot, , holding smartphone, atmospheric",
+          "negative_prompt": "worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon",
+          "camera": "medium",
+          "emotion": "neutral"
+        },
+        {
+          "id": "p003",
+          "duration": 6,
+          "narration": "都这时候了，她还在演。\n如果不是临死前的那一刻，他或许还会被这条消息感动，还会相信这个他爱了七年的女人真的在乎他。\n可就在三天前，他用柳安然的手机转账，意外看到了她的转账记录。",
+          "dialogue": [],
+          "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, modern Chinese urban style, modern interior, wide shot, , , atmospheric",
+          "negative_prompt": "worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon",
+          "camera": "medium",
+          "emotion": "neutral"
+        }
+      ]
+    },
+    {
+      "title": "第二章：提前布局",
+      "setting": "modern urban",
+      "panels": [
+        {
+          "id": "p001",
+          "duration": 6,
+          "narration": "毕业典礼上，陈北辰站在人群中，眼睛一直在搜索那道熟悉的身影。\n「同学，请问计算机系在哪边？」\n就是这句话，上一世就是这句话，拉开了他悲剧的序幕。",
+          "dialogue": [
+            {
+              "speaker": " narrator",
+              "text": "同学，请问计算机系在哪边？"
+            }
+          ],
+          "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, modern Chinese urban style, modern interior, wide shot, , , atmospheric",
+          "negative_prompt": "worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon",
+          "camera": "wide",
+          "emotion": "neutral"
+        },
+        {
+          "id": "p002",
+          "duration": 6,
+          "narration": "陈北辰循声望去，柳安然正朝着他走过来。\n她今天穿了一条白色连衣裙，长发披肩，看起来清新脱俗。\n如果不是亲身经历过，如果不是死过一次，陈北辰或许还会被她的外表迷惑。",
+          "dialogue": [],
+          "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, modern Chinese urban style, modern interior, wide shot, , , atmospheric",
+          "negative_prompt": "worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon",
+          "camera": "medium",
+          "emotion": "neutral"
+        },
+        {
+          "id": "p003",
+          "duration": 6,
+          "narration": "「计算机系？」陈北辰微微一笑，「那边。」\n「谢谢。」柳安然笑了笑，转身就要走。\n按照上一世的剧本，陈北辰应该会主动追上去，询问她的名字和专业。",
+          "dialogue": [
+            {
+              "speaker": " narrator",
+              "text": "计算机系？"
+            },
+            {
+              "speaker": " narrator",
+              "text": "谢谢。"
+            }
+          ],
+          "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, modern Chinese urban style, 1boy, black hair, modern clothes, 1girl, close-up portrait, indoor, emotional, dramatic",
+          "negative_prompt": "worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon",
+          "camera": "close-up",
+          "emotion": "smiling"
+        }
+      ]
+    },
+    {
+      "title": "第三章：反杀开始",
+      "setting": "modern urban",
+      "panels": [
+        {
+          "id": "p001",
+          "duration": 6,
+          "narration": "陈北辰和柳安然\"偶然\"确定了恋爱关系。\n一切都在按照柳安然的剧本走。\n她主动表白，主动献身，主动谈婚论嫁。",
+          "dialogue": [
+            {
+              "speaker": "陈北辰和柳安然",
+              "text": "偶然"
+            }
+          ],
+          "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, modern Chinese urban style, 1boy, black hair, modern clothes, 1girl, close-up portrait, indoor, emotional, dramatic",
+          "negative_prompt": "worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon",
+          "camera": "wide",
+          "emotion": "neutral"
+        },
+        {
+          "id": "p002",
+          "duration": 6,
+          "narration": "陈北辰全程配合，扮演着一个深情款款的男朋友角色。\n同时，他也在暗中收集证据。\n两个人开始频繁\"偶遇\"。",
+          "dialogue": [
+            {
+              "speaker": "两个人开始频繁",
+              "text": "偶遇"
+            }
+          ],
+          "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, modern Chinese urban style, modern interior, wide shot, , , atmospheric",
+          "negative_prompt": "worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon",
+          "camera": "medium",
+          "emotion": "neutral"
+        },
+        {
+          "id": "p003",
+          "duration": 6,
+          "narration": "「北辰，这是我朋友，子轩。」柳安然介绍道。\n「你好，我是周子轩。」周子轩笑着伸出手。\n「北辰经常提起你，说你们是大学最好的兄弟。」柳安然说道。",
+          "dialogue": [
+            {
+              "speaker": " narrator",
+              "text": "北辰，这是我朋友，子轩。"
+            },
+            {
+              "speaker": " narrator",
+              "text": "你好，我是周子轩。"
+            },
+            {
+              "speaker": " narrator",
+              "text": "北辰经常提起你，说你们是大学最好的兄弟。"
+            }
+          ],
+          "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, modern Chinese urban style, 1boy, black hair, modern clothes, 1girl, close-up portrait, indoor, emotional, dramatic",
+          "negative_prompt": "worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon",
+          "camera": "close-up",
+          "emotion": "neutral"
+        }
+      ]
+    }
+  ]
+}
