@@ -1,6 +1,6 @@
 {
   "project": "正文",
-  "created": "2026-03-13T14:24:17.512Z",
+  "created": "2026-03-13T14:32:06.822Z",
   "episodes": [
     {
       "title": "第一章：含恨而终",
@@ -14,6 +14,7 @@
           "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, hospital room, white walls, medical equipment, heart rate monitor, IV drip, hospital bed, 1boy, black hair, short hair, handsome, 22 years old, Chinese male, slender build, medium shot, cinematic composition,",
           "negative_prompt": "worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon, ugly",
           "camera": "wide",
+          "camera_movement": "slow_zoom_out",
           "emotion": "neutral",
           "characters": [
             "陈北辰"
@@ -33,6 +34,7 @@
           "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, hospital room, white walls, medical equipment, heart rate monitor, IV drip, hospital bed, , wide shot, atmospheric,",
           "negative_prompt": "worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon, ugly",
           "camera": "medium",
+          "camera_movement": "static",
           "emotion": "neutral",
           "characters": [],
           "scene": "医院病房"
@@ -45,6 +47,7 @@
           "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, hospital room, white walls, medical equipment, heart rate monitor, IV drip, hospital bed, , wide shot, atmospheric,",
           "negative_prompt": "worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon, ugly",
           "camera": "medium",
+          "camera_movement": "static",
           "emotion": "neutral",
           "characters": [],
           "scene": "医院病房"
@@ -57,6 +60,7 @@
           "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, hospital room, white walls, medical equipment, heart rate monitor, IV drip, hospital bed, , wide shot, atmospheric,",
           "negative_prompt": "worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon, ugly",
           "camera": "medium",
+          "camera_movement": "static",
           "emotion": "neutral",
           "characters": [],
           "scene": "医院病房"
@@ -80,6 +84,7 @@
           "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, graduation ceremony, university campus, outdoor venue, crowd of students, sunny day, 1boy, black hair, short hair, handsome, 22 years old, Chinese male, slender build, medium shot, cinematic composition,",
           "negative_prompt": "worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon, ugly",
           "camera": "wide",
+          "camera_movement": "slow_zoom_out",
           "emotion": "neutral",
           "characters": [
             "陈北辰"
@@ -94,6 +99,7 @@
           "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, graduation ceremony, university campus, outdoor venue, crowd of students, sunny day, 1boy, black hair, short hair, handsome, 22 years old, Chinese male, slender build, medium shot, cinematic composition,",
           "negative_prompt": "worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon, ugly",
           "camera": "medium",
+          "camera_movement": "static",
           "emotion": "neutral",
           "characters": [
             "陈北辰",
@@ -122,6 +128,7 @@
           "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, graduation ceremony, university campus, outdoor venue, crowd of students, sunny day, 1boy, black hair, short hair, handsome, 22 years old, Chinese male, slender build, close-up portrait, emotional, dramatic,",
           "negative_prompt": "worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon, ugly",
           "camera": "close-up",
+          "camera_movement": "slow_push_in",
           "emotion": "neutral",
           "characters": [
             "陈北辰"
@@ -136,6 +143,7 @@
           "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, graduation ceremony, university campus, outdoor venue, crowd of students, sunny day, 1boy, black hair, short hair, handsome, 22 years old, Chinese male, slender build, medium shot, cinematic composition,",
           "negative_prompt": "worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon, ugly",
           "camera": "medium",
+          "camera_movement": "static",
           "emotion": "neutral",
           "characters": [
             "陈北辰"
@@ -161,6 +169,7 @@
           "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, modern interior, 1boy, black hair, short hair, handsome, 22 years old, Chinese male, slender build, close-up portrait, emotional, dramatic,",
           "negative_prompt": "worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon, ugly",
           "camera": "close-up",
+          "camera_movement": "slow_push_in",
           "emotion": "neutral",
           "characters": [
             "陈北辰",
@@ -181,6 +190,7 @@
           "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, modern interior, 1boy, black hair, short hair, handsome, 22 years old, Chinese male, slender build, medium shot, cinematic composition,",
           "negative_prompt": "worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon, ugly",
           "camera": "medium",
+          "camera_movement": "static",
           "emotion": "neutral",
           "characters": [
             "陈北辰"
@@ -208,6 +218,7 @@
           "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, modern interior, 1boy, black hair, short hair, handsome, 22 years old, Chinese male, slender build, close-up portrait, emotional, dramatic,",
           "negative_prompt": "worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon, ugly",
           "camera": "close-up",
+          "camera_movement": "slow_push_in",
           "emotion": "neutral",
           "characters": [
             "陈北辰",
@@ -229,6 +240,7 @@
           "prompt": "masterpiece, best quality, highly detailed, cinematic lighting, modern interior, 1boy, black hair, short hair, handsome, 22 years old, Chinese male, slender build, close-up portrait, emotional, dramatic,",
           "negative_prompt": "worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon, ugly",
           "camera": "close-up",
+          "camera_movement": "slow_push_in",
           "emotion": "neutral",
           "characters": [
             "陈北辰",

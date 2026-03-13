@@ -268,14 +268,32 @@ async function main() {
       // 生成旁白（取第一个段落）
       const narration = panelGroup.map(p => p.text).join('\n');
       
+      // 生成运镜描述
+      let cameraMovement = 'static';
+      if (mainPanel.type === 'dialogue') {
+        cameraMovement = 'slow_push_in'; // 对话时慢慢推近
+      } else if (i === 0) {
+        cameraMovement = 'slow_zoom_out'; // 开头慢慢拉开
+      } else if (emotion === '愤怒' || emotion === '震惊') {
+        cameraMovement = 'quick_push_in'; // 情绪激烈时快推
+      } else if (mainPanel.text.includes('回忆') || mainPanel.text.includes('想起')) {
+        cameraMovement = 'fade_transition'; // 回忆用淡入
+      }
+      
+      // 确定景别
+      let cameraType = 'medium';
+      if (mainPanel.type === 'dialogue') cameraType = 'close-up';
+      else if (i === 0) cameraType = 'wide';
+      
       episode.panels.push({
         id: `p${String(i/3 + 1).padStart(3, '0')}`,
         duration: 4 + panelGroup.length,
-        narration: narration.substring(0, 200), // 限制长度
+        narration: narration.substring(0, 200),
         dialogue: dialogues,
         prompt: generatePrompt(mainPanel, scene.setting, emotion),
         negative_prompt: 'worst quality, low quality, blurry, distorted face, extra limbs, anime, cartoon, ugly',
-        camera: mainPanel.type === 'dialogue' ? 'close-up' : (i === 0 ? 'wide' : 'medium'),
+        camera: cameraType,
+        camera_movement: cameraMovement,
         emotion: emotion,
         characters: mainPanel.characters,
         scene: scene.setting
@@ -302,7 +320,7 @@ async function main() {
   for (const ep of storyboard.episodes) {
     console.log(`\n【${ep.title}】- ${ep.setting}`);
     for (const panel of ep.panels) {
-      console.log(`  ${panel.id}: ${panel.camera} | ${panel.emotion} | 角色: ${panel.characters.join(', ') || '无'}`);
+      console.log(`  ${panel.id}: ${panel.camera} | 运镜: ${panel.camera_movement} | ${panel.emotion} | 角色: ${panel.characters.join(', ') || '无'}`);
       console.log(`     提示词: ${panel.prompt.substring(0, 80)}...`);
     }
   }
